@@ -430,7 +430,7 @@ function About() {
           {/* Bottom Row - Copyright and Terms */}
           <div className="mt-12 text-center">
             <p className="text-lg">
-              © 2024 Coggno. All Rights Reserved. <br />
+              Developed by Time Global <br />
               <a
                 href="#"
                 className="text-white hover:text-[#FF6A13] transition-all"
