@@ -255,111 +255,93 @@ function Home() {
         </section>
 
         {/* Call to Action */}
-        <section className="bg-gradient-to-r from-[#FF9D42] to-[#FF6A13] text-white py-20 rounded-xl relative">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-    {/* Left Section */}
-    <div className="text-center md:text-left md:w-1/2">
-      <h2 className="text-6xl font- text-white leading-tight mb-6">
-      Check Out Our Popular Products
-      </h2>
-      <p className="text-x-lg text-white mb-8">
-      Discover our most popular products, handpicked to address today’s critical compliance and workplace skill needs. Each is crafted by industry experts to ensure the highest quality
-      </p>
-      <button className="px-10 py-4 bg-white text-[#007AFF] font-semibold rounded-full shadow-xl transform hover:scale-110  transition duration-300 ease-in-out">
-        Book a Demo
-      </button>
-    </div>
-
-    {/* Right Section */}
-    <div className="mt-10 md:mt-0 md:w-1/2 flex items-center gap-4">
-      {/* Image 1 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img9.png"
-          alt="Image 1"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-      {/* Image 2 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img10.png"
-          alt="Image 2"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-      {/* Image 3 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img9.png"
-          alt="Image 3"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-
-        {/* Client Testimonials */}
-        <section className="py-16">
-          <div className="max-w-6xl mx-auto px-6 text-center">
-            <h2 className="text-4xl font-extrabold text-[#007AFF] leading-tight mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
-              Hear from the individuals and organizations that trust us to
-              empower their teams.
-            </p>
-            <div className="mt-12 grid md:grid-cols-3 gap-16">
-              {[
-                {
-                  text: "Coggno transformed our employee training process. The platform is easy to use, and our workforce loves it!",
-                  name: "John Doe",
-                  role: "HR Manager",
-                  avatar: "https://randomuser.me/api/portraits/men/49.jpg",
-                },
-                {
-                  text: "Their customer support and course variety are top-notch. Highly recommended!",
-                  name: "Jane Smith",
-                  role: "Operations Lead",
-                  avatar: "https://randomuser.me/api/portraits/men/39.jpg",
-                },
-                {
-                  text: "Coggno helped us meet compliance requirements effortlessly. Truly a lifesaver!",
-                  name: "Sarah Lee",
-                  role: "Compliance Officer",
-                  avatar: "https://randomuser.me/api/portraits/women/49.jpg",
-                },
-              ].map((testimonial, index) => (
-                <div
-                  key={index}
-                  className="bg-[#9eccfe4a] rounded-3xl p-10 shadow-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-500 ease-in-out"
-                >
-                  <p className="text-gray-700 italic text-lg mb-6">
-                    &quot;{testimonial.text}&quot;
-                  </p>
-                  <div className="flex items-center justify-center mt-4">
-                    <img
-                      src={testimonial.avatar}
-                      alt={testimonial.name}
-                      className="w-20 h-20 rounded-full border-4 border-[#007AFF] shadow-lg transition-all duration-300 transform hover:scale-110"
-                    />
-                    <div className="ml-6">
-                      <p className="font-semibold text-[#007AFF] text-2xl">
-                        {testimonial.name}
-                      </p>
-                      <p className="text-gray-500 text-sm">
-                        {testimonial.role}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+        <section className="bg-gradient-to-r from-[#FF9D42] to-[#FF9D42] text-white py-20 rounded-xl relative">
+          <div className="gap-12 mx-auto px-12 flex flex-col md:flex-row items-center justify-between">
+            {/* Left Section */}
+            <div className="text-center md:text-left md:w-1/2">
+              <h2 className="text-6xl font- text-white leading-tight mb-6">
+                Check Out Our Popular Products
+              </h2>
+              <p className="text-x-lg text-white mb-8">
+                Discover our most popular products, handpicked to address today’s critical compliance and workplace skill needs. Each is crafted by industry experts to ensure the highest quality
+              </p>
+              <button className="px-10 py-4 bg-white text-[#007AFF] font-semibold rounded-full shadow-xl transform hover:scale-110  transition duration-300 ease-in-out">
+                Book a Demo
+              </button>
             </div>
+
+            {/* Right Section */}
+            <div className="mt-10 md:mt-0 md:w-1/2 flex items-center gap-4">
+              {/* Image 1 with Overlay Content */}
+              <div
+                className="relative flex items-center justify-center rounded-lg"
+                style={{
+                  backgroundImage: `url(/images/img9.png)`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  width: '300px',
+                  height: '300px',
+                }}
+              >
+                {/* Overlay for Text and Button */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col items-center justify-center text-white p-4">
+                  <h3 className="text-2xl font-bold mb-2 mt-24">Product 1</h3>
+                  <p className="text-sm text-center mb-4">
+                    Discover this amazing product designed to solve your challenges effectively.
+                  </p>
+                  <button className="px-6 py-2 bg-white text-[#FF6A13] font-semibold rounded-full shadow-lg hover:bg-[#FF6A13] hover:text-white transition duration-300">
+                    Learn More &rarr;
+                  </button>
+                </div>
+              </div>
+
+              {/* Image 2 with Overlay Content */}
+              <div
+                className="relative flex items-center justify-center rounded-lg"
+                style={{
+                  backgroundImage: `url(/images/img10.png)`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  width: '300px',
+                  height: '300px',
+                }}
+              >
+                {/* Overlay for Text and Button */}
+                <div className="absolute inset-0 bg-black bg-opacity-50 rounded-lg flex flex-col items-center justify-center text-white p-4">
+                  <h3 className="text-2xl font-bold mb-2 mt-24">Product 2</h3>
+                  <p className="text-sm text-center mb-4">
+                    Discover this amazing product designed to solve your challenges effectively.
+                  </p>
+                  <button className="px-6 py-2 bg-white text-[#FF6A13] font-semibold rounded-full shadow-lg hover:bg-[#FF6A13] hover:text-white transition duration-300">
+                    Learn More &rarr;
+                  </button>
+                </div>
+              </div>
+
+              {/* Forward Icon */}
+              <button
+                className="flex items-center justify-center w-12 h-12 bg-[#FF9D42] text-white rounded-full shadow-lg hover:scale-110 transition duration-300"
+                onClick={() => console.log('Forward button clicked')}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-6 w-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+
           </div>
         </section>
-
       </div>
       <footer className="bg-gradient-to-r from-[#007AFF] to-[#00C6FF] text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
