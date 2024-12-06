@@ -1,9 +1,9 @@
-import { FaBook, FaCheckCircle, FaFileAlt, FaLightbulb, FaMobileAlt, FaMoneyBillAlt, FaTrophy, FaUser } from "react-icons/fa";
+import { FaBook, FaLightbulb, FaTrophy } from "react-icons/fa";
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-function Home() {
+function About() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   return (
     <div className="bg-gray-100">
@@ -151,155 +151,115 @@ function Home() {
       </header>
       <div className="font-sans  mx-auto container py-10">
         {/* Hero Section */}
-        <section className="relative mt-20 bg-[#ABD3FF4A] text-[#007AFF] py-20 rounded-xl shadow-xl">
+        <section className="relative mt-20 bg-gray-300 text-[#007AFF] py-20 rounded-xl shadow-xl">
           <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center">
-            {/* Text Content */}
             <div className="md:w-1/2 text-center md:text-left">
-              <h1 className="text-4xl font-bold text-gray-900 leading-snug">
-                Empower Your Workforce with Over
-                <span className="text-[#007AFF]"> 10000+ Online Training Courses</span>
+              <h1 className="text-5xl font-extrabold text-gray-900 leading-tight">
+                About <span className="text-[#007AFF]">Coggno</span>
               </h1>
-              <p className="mt-6 text-lg text-gray-600">
-                Industry-specific, accessible, and compliant online courses for safety, compliance, workplace diversity, and beyond.
+              <p className="mt-6 text-lg font-medium text-gray-600">
+                Empowering organizations worldwide with cutting-edge online
+                training solutions. From soft skills to compliance, we are your
+                trusted partner in success.
               </p>
-              <button className="mt-8 px-6 py-3 bg-[#FFAA33] text-white font-medium rounded-full shadow hover:shadow-lg transition-transform duration-300">
-                Book a Demo
+              <button className="mt-8 px-8 py-3 bg-[#007AFF] text-white font-semibold rounded-full shadow-lg hover:shadow-2xl transform hover:scale-105 transition duration-300 ease-in-out">
+                Discover More
               </button>
             </div>
-            {/* Image Section */}
-            <div className="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+            <div className="md:w-1/2 mt-12 md:mt-0">
               <img
-                src="/images/hero.png"
-                alt="Workforce Illustration"
-                className="w-full max-w-md"
+                src="/images/img2.png"
+                alt="Hero Illustration"
+                className=" w-full h-auto object-cover"
               />
-            </div>
-          </div>
-
-          {/* Trusted By Section */}
-          <div className="mt-12 max-w-6xl mx-auto px-6 text-center">
-            <p className="text-gray-700 font-medium">Trusted By:</p>
-            <div className="flex justify-center gap-8 mt-4">
-              <img src="/images/img5.png" alt="DHL" className="h-[70px]" />
-              <img src="/images/img6.png" alt="DHL" className="h-[70px]" />
-              <img src="/images/img7.png" alt="DHL" className="h-[70px]" />
-              <img src="/images/img8.png" alt="DHL" className="h-[70px]" />
-
             </div>
           </div>
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="py-16 bg-[#F9FAFB] rounded-t-lg mt-9">
-          <div className="max-w-6xl mx-auto px-6">
-            {/* Header Section */}
-            <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-              <h2 className="text-4xl flex-1 text-gray-900 mb-4 md:mb-0">
-                Why Choose Coggno for Your Online Training Needs?
-              </h2>
-              <p className="text-gray-600 flex-1 text-sm md:ml-9 text-center md:text-left">
-                Our online courses provide individual training experiences that are
-                relevant to today’s issues and challenges. Equip your team with
-                essential skills for compliance and success. Our courses empower HR
-                and compliance professionals to foster growth and excellence.
-              </p>
-            </div>
-            {/* Cards Section */}
-            <div className="grid md:grid-cols-3 gap-6">
+        <section className="py-16  rounded-t-lg">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            <h2 className="text-4xl font-extrabold text-[#007AFF] mb-6">
+              Why Choose Coggno?
+            </h2>
+            <p className="text-gray-600 text-lg mb-12">
+              Empowering your team with the best learning tools for success.
+            </p>
+            <div className="grid md:grid-cols-3 gap-12">
               {[
                 {
-                  icon: <FaBook size={30} />,
+                  icon: <FaBook size={60} />,
                   title: "10,000+ Courses",
                 },
                 {
-                  icon: <FaMoneyBillAlt size={30} />,
-                  title: "Cost-Effective Pricing",
+                  icon: <FaLightbulb size={60} />,
+                  title: "Easy to Use",
                 },
                 {
-                  icon: <FaMobileAlt size={30} />,
-                  title: "Mobile Friendly",
-                },
-                {
-                  icon: <FaUser size={30} />,
-                  title: "Easy To Use",
-                },
-                {
-                  icon: <FaCheckCircle size={30} />,
-                  title: "Full Regional Compliance",
-                },
-                {
-                  icon: <FaFileAlt size={30} />,
-                  title: "Printable Certificate",
+                  icon: <FaTrophy size={60} />,
+                  title: "Trusted by Top Brands",
                 },
               ].map((item, index) => (
                 <div
                   key={index}
-                  className="bg-[#ABD3FF4A] rounded-3xl w-72  p-6 shadow-lg hover:shadow-xl transform hover:scale-105 transition duration-300"
+                  className="bg-white rounded-xl p-10 shadow-lg w-64 hover:shadow-2xl transform hover:scale-105 transition-all duration-300 ease-in-out"
                 >
-                  <div className="w-16 h-16 bg-[#007AFF] text-[white] rounded-full flex items-center justify-center mb-4 mx-auto">
+                  <div className="w-24 h-24 bg-gradient-to-r from-[#007AFF] to-[#00C6FF] text-white rounded-full flex items-center justify-center mx-auto mb-6 text-4xl shadow-xl transform hover:scale-110 transition-all duration-300 ease-in-out">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-700 text-center">
+                  <h3 className="text-xl font-semibold text-gray-700 mb-2">
                     {item.title}
                   </h3>
                 </div>
               ))}
             </div>
-            {/* Button */}
-            <div className="mt-12 text-center">
-              <button className="px-6 py-3 bg-[#FF8C00] text-white font-medium rounded-full shadow hover:shadow-lg transform hover:scale-105 transition duration-300">
-                Book Demo →
-              </button>
-            </div>
           </div>
         </section>
 
-        {/* Call to Action */}
-        <section className="bg-gradient-to-r from-[#FF9D42] to-[#FF6A13] text-white py-20 rounded-xl relative">
-  <div className="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between">
-    {/* Left Section */}
-    <div className="text-center md:text-left md:w-1/2">
-      <h2 className="text-6xl font- text-white leading-tight mb-6">
-      Check Out Our Popular Products
-      </h2>
-      <p className="text-x-lg text-white mb-8">
-      Discover our most popular products, handpicked to address today’s critical compliance and workplace skill needs. Each is crafted by industry experts to ensure the highest quality
-      </p>
-      <button className="px-10 py-4 bg-white text-[#007AFF] font-semibold rounded-full shadow-xl transform hover:scale-110  transition duration-300 ease-in-out">
-        Book a Demo
-      </button>
-    </div>
+        {/* Vision and Mission Section */}
+        <section className="py-16 rounded-xl bg-gradient-to-br from-[#007AFF] to-[#ffffff]">
+          <div className="max-w-6xl mx-auto px-6">
+            {/* Vision Section */}
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div>
+                <h2 className="text-5xl font-bold text-gray-700 leading-tight">
+                  Our Vision
+                </h2>
+                <p className="text-gray-700 mt-6 text-xl">
+                  To redefine learning with innovative solutions, enabling
+                  individuals and organizations to reach their full potential.
+                </p>
+              </div>
+              <div className="relative group overflow-hidden">
+                <img
+                  src="/images/img3.png"
+                  alt="Vision illustration"
+                  className="rounded-xl transform transition duration-500 ease-in-out group-hover:scale-105"
+                />
+              </div>
+            </div>
 
-    {/* Right Section */}
-    <div className="mt-10 md:mt-0 md:w-1/2 flex items-center gap-4">
-      {/* Image 1 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img9.png"
-          alt="Image 1"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-      {/* Image 2 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img10.png"
-          alt="Image 2"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-      {/* Image 3 */}
-      <div className="flex items-center">
-        <img
-          src="/images/img9.png"
-          alt="Image 3"
-          className="w-full h-full rounded-lg"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
+            {/* Mission Section */}
+            <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
+              <div className="relative group overflow-hidden">
+                <img
+                  src="/images/img4.png"
+                  alt="Mission illustration"
+                  className="rounded-xl transform transition duration-500 ease-in-out group-hover:scale-105"
+                />
+              </div>
+              <div>
+                <h2 className="text-5xl font-bold text-gray-700 leading-tight">
+                  Our Mission
+                </h2>
+                <p className="text-gray-700 mt-6 text-xl">
+                  To provide world-class training solutions that meet the
+                  dynamic needs of businesses and professionals everywhere.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Client Testimonials */}
         <section className="py-16">
@@ -334,7 +294,7 @@ function Home() {
               ].map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-[#9eccfe4a] rounded-3xl p-10 shadow-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-500 ease-in-out"
+                  className="bg-white rounded-3xl p-10 shadow-xl transform hover:scale-105 hover:shadow-2xl transition-all duration-500 ease-in-out"
                 >
                   <p className="text-gray-700 italic text-lg mb-6">
                     &quot;{testimonial.text}&quot;
@@ -360,6 +320,27 @@ function Home() {
           </div>
         </section>
 
+        {/* Call to Action */}
+        <section className="bg-gradient-to-r from-[#FF9D42] to-[#FF6A13] text-white py-20 rounded-xl relative">
+          <div className="max-w-6xl mx-auto px-6 text-center">
+            {/* Heading with Styling */}
+            <h2 className="text-5xl font-extrabold text-white leading-tight mb-6">
+              Ready to Empower Your Team?
+            </h2>
+            <p className="text-lg text-gray-200 mb-8">
+              Join thousands of organizations upgrading their workforce training
+              with cutting-edge solutions.
+            </p>
+
+            {/* Button with Hover Effect and Smooth Transition */}
+            <button className="px-10 py-4 bg-white text-[#007AFF] font-semibold rounded-full shadow-xl transform hover:scale-110 hover:bg-[#FF9D42] transition duration-300 ease-in-out">
+              Start Now
+            </button>
+
+            {/* Decorative Element for Visual Appeal */}
+            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-[120px] h-[120px] rounded-full bg-white opacity-20 blur-3xl"></div>
+          </div>
+        </section>
       </div>
       <footer className="bg-gradient-to-r from-[#007AFF] to-[#00C6FF] text-white py-16">
         <div className="max-w-6xl mx-auto px-6">
@@ -471,4 +452,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default About;
